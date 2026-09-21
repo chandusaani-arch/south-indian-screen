@@ -41,13 +41,11 @@ nav a {
 }
 
 .hero {
-    min-height: 75vh;
-    padding: 120px 7%;
+    min-height: 70vh;
+    padding: 100px 7%;
     display: flex;
     align-items: center;
-    background:
-        linear-gradient(to right, #080808 25%, transparent),
-        linear-gradient(to top, #080808, transparent);
+    background: linear-gradient(to right, #080808 30%, transparent);
 }
 
 .hero-content {
@@ -94,21 +92,35 @@ section {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .card {
     background: #151515;
-    min-height: 220px;
-    padding: 25px;
-    display: flex;
-    align-items: end;
+    overflow: hidden;
     border: 1px solid #242424;
+}
+
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
 }
 
 .card h3 {
     font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #888;
+    font-size: 14px;
 }
 
 footer {
@@ -124,12 +136,6 @@ footer {
     }
 
     .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .cards {
         grid-template-columns: 1fr;
     }
 }
@@ -139,6 +145,7 @@ footer {
 <body>
 
 <header>
+
     <div class="logo">SOUTH INDIAN SCREENS</div>
 
     <nav>
@@ -147,9 +154,12 @@ footer {
         <a href="#">TRAILERS</a>
         <a href="#">ABOUT</a>
     </nav>
+
 </header>
 
+
 <div class="hero">
+
     <div class="hero-content">
 
         <div class="tag">CINEMA • STORIES • CULTURE</div>
@@ -168,33 +178,44 @@ footer {
         <a class="button" href="#">EXPLORE CINEMA</a>
 
     </div>
+
 </div>
+
 
 <section>
 
-    <h2 class="section-title">Explore</h2>
+    <h2 class="section-title">Featured</h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>Latest Movies</h3>
+            <img src="jayam.webp" alt="Jayam">
+            <div class="card-content">
+                <h3>Jayam</h3>
+                <p>South Indian Cinema</p>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Trailers</h3>
+            <img src="nns.webp" alt="NNS">
+            <div class="card-content">
+                <h3>NNS</h3>
+                <p>Serial & Television</p>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Reviews</h3>
-        </div>
-
-        <div class="card">
-            <h3>Short Films</h3>
+            <img src="aam.webp" alt="AAM">
+            <div class="card-content">
+                <h3>AAM</h3>
+                <p>Stories & Entertainment</p>
+            </div>
         </div>
 
     </div>
 
 </section>
+
 
 <section>
 
@@ -206,6 +227,7 @@ footer {
     </p>
 
 </section>
+
 
 <footer>
     © 2026 South Indian Screens
